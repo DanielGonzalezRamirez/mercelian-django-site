@@ -1,4 +1,5 @@
 {% extends "main/01_base.html" %}
+{% load static %}
 {% block content %}
     <h1> Daniel Julián González Ramírez </h1>
     <div class="description">
@@ -7,24 +8,49 @@
         </p>
         <p>
             During my master's I did a lot of stuff with Ground Penetrating Radar (GPR). I got involved with GPR because I love electromagnetism and its applications.
-            I belong to a research team at Universidad de los Andes, directed by professor Roberto Bustamante. I first was hired for the research team as a graduate student and, when I graduated the master, I was hired as a research professional by the university.
+            I belong to a research team at Universidad de los Andes, directed by professor Roberto Bustamante. At our research team we aim to contribute to humanitarian demining (antipersonnel-landmine detection) in Colombia using GPR measurements. 
+            I first was hired for the research team as a graduate student and, when I graduated the master, I was hired as a research professional by the university.
         </p>
         <p>
             Our research team is small, we have had between two and four members at a time. Being a small team is great, because everyone is involved in various topics, we have to be scappy and do a wide variety of things.
-            <!-- Mechanical adjustments to our equipment, simulations, coding, debugging, testing, measuring  -->
         </p>
         <p>
             The major highlight of our research is the development of a laboratory-grade Ground Penetrating Radar. We used a two-port Vector Network Analyzer (VNA) as the core of our radar, to each port we connected a commercial Ultra-Wide Band (UWB) antenna.
-            To move our radar, we developed a position cotrolling system based on stepper motors. The position controlling system had 1 mm resolution in its steps.
+            To move our radar, we developed a position cotrolling system based on stepper motors. The position controlling system has 1 mm resolution in its steps.
             All the components were put together and controlled with a computer program we developed.
+        </p>
+        <p>
+            Here I list a few of the things I had to learn and master to contribute towards the development of the GPR:
+            <ul>
+                <li> Control a VNA with the vx11 library in Python. </li>
+                <li> Control a xPro (arduino based card) through serial G-Code commands. </li>
+                <li> Protocol for serial communication with Serial Python library. </li>
+                <li> Multiprocessing in Python for syncronization in the execution of VNA measurements and position control. </li>
+                <li> Create GUIs using PyQt5 for interaction with the GPR. </li>
+                <li> Use of Matplotlib library for plotting results and realtime status of the GPR position. </li>
+                <li> File and data management with pandas and h5py for storing the GPR measurements. </li>
+                <li> Use of Mayavi library for creating beautiful 3-D and 4-D plots of the GPR results. </li>
+                <li> Soil electromagnetic characterization. </li>
+                <li> VNA calibration and measurement techniques. </li>
+                <li> Antenna characaterization. </li>
+                <li> GPR measurement techniques. </li>
+                <li> Image migration from GPR radagrams. </li>
+            </ul>
         </p>
     </div>
     <div class="quicklinks">
+        <img src="{% static 'main/media/daniel.jpeg' %}" alt="A picture of Daniel">
         <h3> Links to stuff I've done:</h3>
         <ul>
             <li> My <a href="https://github.com/DanielGonzalezRamirez">Github</a> </li>
             <li> Website to Santa Cruz de Mompós school: <a href="https://colegiosantacruzdemompos.edu.co/">Colegio Santa Cruz</a> </li>
             <li> Website to Colonia San Miguel de Sema foundation: <a href="https://coloniasanmigueldesema.org/">Colonia San Miguel</a> </li>
+        </ul>
+        <h3> Links to my CV: </h3>
+        <ul>
+            <li> <a href="https://github.com/DanielGonzalezRamirez">CV - English</a> </li>
+            <li> <a href="https://github.com/DanielGonzalezRamirez">CV - Español</a> </li>
+            <li> <a href="https://github.com/DanielGonzalezRamirez">CV - Latex Template</a> </li>
         </ul>
     </div>
 {% endblock content %}
