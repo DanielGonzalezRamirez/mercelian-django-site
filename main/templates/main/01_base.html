@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta tags -->
+        <meta charset="utf-8">
+        <!-- CSS stylesheet -->
+        <link href="{% static 'main/style.css' %}" rel="stylesheet" type="text/css">
+        <!-- Title -->
+        {% if title %}
+            <title> Mercelian - {{ title }} </title>
+        {% else %}
+            <title> Mercelian </title>
+        {% endif %}
+    </head>
+    <body>
+        {% block content %}
+        {% endblock content%}
+    </body>
+</html>
